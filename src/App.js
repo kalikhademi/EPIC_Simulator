@@ -5,23 +5,26 @@ import Quiz from "./components/Quiz";
 import Result from "./components/Result";
 import logo from "./svg/logo.svg";
 import "./App.css";
+// import { CSSTransitionGroup } from "react-transition-group";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    this.initialstate = {
       counter: 0,
       questionId: 1,
       question: "",
+      questionType: "",
       answerOptions: [],
       answer: "",
       answersCount: {},
-      result: "",
-      protectiveResult: "",
+      result: 0,
+      protectiveResult: 0,
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+    this.state = this.initialstate;
   }
 
   componentDidMount() {
@@ -30,6 +33,7 @@ class App extends Component {
     );
     this.setState({
       question: quizQuestions[0].question,
+      questionType: quizQuestions[0].type,
       answerOptions: shuffledAnswerOptions[0],
     });
   }
@@ -56,7 +60,6 @@ class App extends Component {
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
-
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
@@ -77,54 +80,47 @@ class App extends Component {
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
+    let tmpProtective = 0;
+    const answersCount = this.state.answersCount;
+    console.log("the question type is:", this.state.questionType);
+    const answersCountKeys = Object.keys(answersCount);
+    console.log("the answer keys are :", answersCountKeys);
+    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
+    console.log("the answer values are:", answersCountValues);
 
+    if (this.state.questionType === "raterBox") {
+      console.log("I am herererere");
+      tmpProtective = this.state.protectiveResult + Number(answersCountValues);
+      console.log("the protective result is:", tmpProtective);
+      this.setState({ protectiveResult: tmpProtective });
+    }
+    console.log("the answer is :", this.state.answersCount);
     this.setState({
       counter: counter,
       questionId: questionId,
       question: quizQuestions[counter].question,
+      questionType: quizQuestions[counter].questionType,
       answerOptions: quizQuestions[counter].answers,
       answer: "",
     });
   }
-  // need to change this
-  getResults() {
-    const answersCount = this.state.answersCount;
-    const answersCountKeys = Object.keys(answersCount);
-    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
-    const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
-    return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
+  resetQuiz() {
+    return this.setState(this.initialstate);
   }
 
-  getResultsModified() {
-    // check if the type of the question is yes or no
-    const questionType = this.state.answerOptions.type;
-    console.log("the question type is :", questionType);
-
-    if (questionType === "yes/no") {
-      //if it is yes or not, if the answer is yes add one to the result
-      if (this.state.answer === "yes") {
-        this.setState({
-          result: this.state.result + 1,
-          protectiveResult: this.state.protectiveResult,
-        });
-      }
-    } else {
-      this.setState({
-        result: this.state.result,
-        protectiveResult: this.state.protectiveResult + this.answer,
-      });
-    }
-
-    //else add the number value to the result
+  getResults() {
+    const answersCount = this.state.answersCount;
+    // const answersCountKeys = Object.keys(answersCount);
+    // const answersCountValues = answersCountKeys.map(key => answersCount[key]);
+    const result = answersCount.negative;
+    console.log("result is:", result);
+    return result;
   }
 
   setResults(result) {
-    if (result.length === 1) {
-      this.setState({ result: result[0] }); // add the protective result here
-    } else {
-      this.setState({ result: "Undetermined" }); // add the protective result here
-    }
+    this.setState({
+      result: result,
+    });
   }
 
   renderQuiz() {
@@ -134,6 +130,7 @@ class App extends Component {
         answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
+        questionType={this.state.questionType}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
       />
@@ -141,9 +138,14 @@ class App extends Component {
   }
 
   renderResult() {
-    return <Result quizResult={this.state.result} />;
+    return (
+      <Result
+        quizResult={this.state.result}
+        protectiveResult={this.state.protectiveResult}
+      />
+    );
   }
-
+  /* <span>Photo by <a href="https://unsplash.com/@fakurian?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Milad B. Fakurian</a> on <a href="https://unsplash.com/s/photos/idaho-prison?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
   render() {
     return (
       <div className="App">
