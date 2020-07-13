@@ -5,6 +5,7 @@ import Quiz from "./components/Quiz";
 import Result from "./components/Result";
 import logo from "./svg/logo.svg";
 import "./App.css";
+import { Button } from "@material-ui/core";
 // import { CSSTransitionGroup } from "react-transition-group";
 
 class App extends Component {
@@ -21,6 +22,17 @@ class App extends Component {
       answersCount: {},
       result: 0,
       protectiveResult: 0,
+      questionCategory: "",
+      criminalHistory: 0,
+      educantionEmployment: 0,
+      financial: 0,
+      family: 0,
+      accomodation: 0,
+      leisure: 0,
+      companions: 0,
+      alcoholDrug: 0,
+      emotionalPersonal: 0,
+      attitude: 0,
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -34,6 +46,7 @@ class App extends Component {
     this.setState({
       question: quizQuestions[0].question,
       questionType: quizQuestions[0].type,
+      questionCategory: quizQuestions[0].category,
       answerOptions: shuffledAnswerOptions[0],
     });
   }
@@ -76,25 +89,78 @@ class App extends Component {
       answer: answer,
     }));
   }
-
+  computeCategoryResult(category) {
+    switch (category) {
+      case "criminal":
+        console.log(category);
+        this.setState({ criminalHistory: this.state.criminalHistory + 1 });
+        break;
+      case "education/employment":
+        console.log(category);
+        this.setState({
+          educantionEmployment: this.state.educantionEmployment + 1,
+        });
+        break;
+      case "financial":
+        console.log(category);
+        this.setState({ financial: this.state.financial + 1 });
+        break;
+      case "family/marital":
+        console.log(category);
+        this.setState({ family: this.state.family + 1 });
+        break;
+      case "accommodation":
+        console.log(category);
+        this.setState({ accomodation: this.state.accomodation + 1 });
+        break;
+      case "leisure/recreation":
+        console.log(category);
+        this.setState({ leisure: this.state.leisure + 1 });
+        break;
+      case "companions":
+        console.log(category);
+        this.setState({ companions: this.state.companions + 1 });
+        break;
+      case "alcohol/drug problems":
+        console.log(category);
+        this.setState({ alcoholDrug: this.state.alcoholDrug + 1 });
+        break;
+      case "emotional/personal":
+        console.log(category);
+        this.setState({ emotionalPersonal: this.state.emotionalPersonal + 1 });
+        break;
+      case "attitude/orientation":
+        console.log(category);
+        this.setState({ attitude: this.state.attitude + 1 });
+        break;
+      default:
+        console.log("there is no category");
+    }
+  }
   setNextQuestion() {
+    //defining variables
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
     let tmpProtective = 0;
     const answersCount = this.state.answersCount;
+    const category = this.state.questionCategory;
     console.log("the question type is:", this.state.questionType);
+    console.log("the question category is:", this.state.questionCategory);
+
     const answersCountKeys = Object.keys(answersCount);
     console.log("the answer keys are :", answersCountKeys);
     const answersCountValues = answersCountKeys.map(key => answersCount[key]);
     console.log("the answer values are:", answersCountValues);
-
+    //computing the protective result for each question
     if (this.state.questionType === "raterBox") {
       console.log("I am herererere");
       tmpProtective = this.state.protectiveResult + Number(answersCountValues);
       console.log("the protective result is:", tmpProtective);
       this.setState({ protectiveResult: tmpProtective });
     }
-    console.log("the answer is :", this.state.answersCount);
+    //computing the categories result
+    this.computeCategoryResult(category);
+
     this.setState({
       counter: counter,
       questionId: questionId,
@@ -102,16 +168,16 @@ class App extends Component {
       questionType: quizQuestions[counter].questionType,
       answerOptions: quizQuestions[counter].answers,
       answer: "",
+      questionCategory: quizQuestions[counter].category,
     });
   }
+
   resetQuiz() {
     return this.setState(this.initialstate);
   }
 
   getResults() {
     const answersCount = this.state.answersCount;
-    // const answersCountKeys = Object.keys(answersCount);
-    // const answersCountValues = answersCountKeys.map(key => answersCount[key]);
     const result = answersCount.negative;
     console.log("result is:", result);
     return result;
@@ -131,6 +197,7 @@ class App extends Component {
         questionId={this.state.questionId}
         question={this.state.question}
         questionType={this.state.questionType}
+        questionCategory={this.state.questionCategory}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
       />
@@ -142,6 +209,16 @@ class App extends Component {
       <Result
         quizResult={this.state.result}
         protectiveResult={this.state.protectiveResult}
+        criminalHistory={this.state.criminalHistory}
+        educantionEmployment={this.state.educantionEmployment}
+        financial={this.state.financial}
+        family={this.state.family}
+        accomodation={this.state.accomodation}
+        leisure={this.state.leisure}
+        companions={this.state.companions}
+        alcoholDrug={this.state.alcoholDrug}
+        emotionalPersonal={this.state.emotionalPersonal}
+        attitude={this.state.attitude}
       />
     );
   }
@@ -154,6 +231,9 @@ class App extends Component {
           <h2>Idaho Pretrial Risk Assessmnet Simulator</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        <Button color="primary" onClick={this.resetQuiz}>
+          Reset
+        </Button>
       </div>
     );
   }
