@@ -38,6 +38,10 @@ class App extends Component {
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     this.state = this.initialstate;
   }
+  // onResetClick(e) {
+  //   this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+  //   this.setState(this.initialState);
+  // }
 
   componentDidMount() {
     const shuffledAnswerOptions = quizQuestions.map(question =>
@@ -173,7 +177,7 @@ class App extends Component {
   }
 
   resetQuiz() {
-    return this.setState(this.initialstate);
+    this.setState(this.initialstate);
   }
 
   getResults() {
@@ -222,6 +226,7 @@ class App extends Component {
       />
     );
   }
+
   /* <span>Photo by <a href="https://unsplash.com/@fakurian?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Milad B. Fakurian</a> on <a href="https://unsplash.com/s/photos/idaho-prison?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
   render() {
     return (
@@ -231,7 +236,12 @@ class App extends Component {
           <h2>Idaho Pretrial Risk Assessmnet Simulator</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
-        <Button color="primary" onClick={this.resetQuiz}>
+        <Button
+          variant="contained"
+          size="large"
+          color="secondary"
+          onClick={this.resetQuiz.bind(this)}
+        >
           Reset
         </Button>
       </div>
