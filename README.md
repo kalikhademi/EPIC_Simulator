@@ -20,9 +20,13 @@ Check package.json file and ensure scripts are notated as below:
 
 "scripts": {
 "start": "react-scripts start",
+
 "build": "react-scripts build",
+
 "test": "react-scripts test",
+
 "eject": "react-scripts eject"
+
 },
 
 # Step 4:
