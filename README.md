@@ -16,6 +16,8 @@ Enter the local directory of the application using the following command on Term
 # Step 3:
 
 Check package.json file and ensure scripts are notated as below:
+
+
 "scripts": {
 "start": "react-scripts start",
 "build": "react-scripts build",
