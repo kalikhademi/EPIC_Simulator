@@ -5,29 +5,24 @@ You need to follow these steps to run the application:
 
 Clone the code from the repo in [https://github.com/kalikhademi/EPIC_Simulator] using the following command:
 
-### git clone [https://github.com/kalikhademi/EPIC_Simulator]
+`git clone [https://github.com/kalikhademi/EPIC_Simulator]`
 
 # Step 2:
 
 Enter the local directory of the application using the following command on Terminal (MAC OSX and Linux) or Command Line (Windows):
-
-### cd [local repository]
+`cd [local repository]`
 
 # Step 3:
 
 Check package.json file and ensure scripts are notated as below:
 
 
-"scripts": {
-"start": "react-scripts start",
-
-"build": "react-scripts build",
-
-"test": "react-scripts test",
-
-"eject": "react-scripts eject"
-
-},
+`"scripts": {
+"start": "react-scripts start",<br />
+"build": "react-scripts build",<br />
+"test": "react-scripts test",<br />
+"eject": "react-scripts eject"<br />
+}`
 
 # Step 4:
 
@@ -37,28 +32,28 @@ Delete the node_modules folder and any 'lock' files such as package-lock.json if
 
 Install the Node Package Manager (NPM) using:
 
-### npm install npm@latest -g
+`npm install npm@latest -g`
 
 # Step 6:
 
 In the project directory, you can run:
 
-### `npm start`
+`npm start`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits and save.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits and save.<br />
 You will also see any errors in the console. You can use the Developer Tools to find more information (on browsers such as Mozilla and Google Chrome).
+
+## Files Information
 
 You will need to work with scripts in "build" and "src" directories only.
 
-# build
+# Build Directory
 
 You will only change the "index.html" and "favicon.ico" in this directory.
 If you want to change the way that app looks, you need to access the index.html in this directory.[Lines 4 to 14]
 "favicon.ico" will be used for the icon in the browser tab.
 
-# src
+# Src Directory
 
 All the functionalities of the application come from this directory. I will explain all the scripts and sections in detail.
 
