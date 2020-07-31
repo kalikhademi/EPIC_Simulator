@@ -7,7 +7,7 @@ Clone the code from the repo in [https://github.com/kalikhademi/EPIC_Simulator] 
 
 ### git clone [https://github.com/kalikhademi/EPIC_Simulator]
 
-=======
+
 `git clone [https://github.com/kalikhademi/EPIC_Simulator]`
 
 # Step 2:
@@ -16,7 +16,7 @@ Enter the local directory of the application using the following command on Term
 
 ### cd [local repository]
 
-=======
+
 `cd [local repository]`
 
 # Step 3:
@@ -29,7 +29,7 @@ Check package.json file and ensure scripts are notated as below:
 "test": "react-scripts test",
 "eject": "react-scripts eject"
 },
-=======
+
 
 `"scripts": { "start": "react-scripts start",<br /> "build": "react-scripts build",<br /> "test": "react-scripts test",<br /> "eject": "react-scripts eject"<br /> }`
 
@@ -43,7 +43,7 @@ Install the Node Package Manager (NPM) using:
 
 ### npm install npm@latest -g
 
-=======
+
 `npm install npm@latest -g`
 
 # Step 6:
@@ -61,7 +61,7 @@ You will need to work with scripts in "build" and "src" directories only.
 
 # build
 
-=======
+
 `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits and save.<br />
@@ -79,7 +79,6 @@ If you want to change the way that app looks, you need to access the index.html 
 
 # src
 
-=======
 
 # Src Directory
 
