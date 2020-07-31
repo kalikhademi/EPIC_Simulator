@@ -1,14 +1,18 @@
 .App-logo {
-  animation: spin infinite 20s linear;
+  /* animation: spin infinite 20s linear; */
   height: 80px;
   text-align: center;
 }
 
 .App-header {
-  background-color: rgb(9, 245, 186);
+  background-color: rgb(119, 136, 153);
   padding: 20px;
   color: white;
   text-align: center;
+}
+
+.chip {
+  font-size: medium;
 }
 
 .App-intro {

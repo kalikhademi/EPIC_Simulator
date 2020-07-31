@@ -278,19 +278,19 @@ var quizQuestions = [
     question: "Rate the participation/performance score in the school",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -302,19 +302,19 @@ var quizQuestions = [
     question: "Rate the offender's interaction with other peers  in school",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -326,19 +326,19 @@ var quizQuestions = [
     question: "Rate the interactions with authority figures",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -350,19 +350,19 @@ var quizQuestions = [
     question: "Rate the financial status of the offender",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -374,19 +374,19 @@ var quizQuestions = [
     question: "Is the offender relied upon social assistance",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -399,19 +399,19 @@ var quizQuestions = [
       "Rate the offender's level of satisfaction with marital or equivalent situation",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -423,19 +423,19 @@ var quizQuestions = [
     question: "Rate the offernder's non-rewarding relation with parents",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -448,19 +448,19 @@ var quizQuestions = [
       "Rate the offernder's non-rewarding relation with other relatives",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -489,19 +489,19 @@ var quizQuestions = [
     question: "Does the offender has unsatisfactory accomodation?",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -694,19 +694,19 @@ var quizQuestions = [
     question: "Does offender currently has an alcohol problem?",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -718,19 +718,19 @@ var quizQuestions = [
     question: "Does offender currently has a drug problem?",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -911,19 +911,19 @@ var quizQuestions = [
       "To what degree are they: self-centered; high sensation seeking; indifferent or callous towards others?",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
@@ -936,19 +936,19 @@ var quizQuestions = [
       "are they looking for quick fixes or are they committed to something basically stable and pro-social?",
     answers: [
       {
-        type: "prosocial",
+        type: "0",
         content: "0",
       },
       {
-        type: "prosocial",
+        type: "1",
         content: "1",
       },
       {
-        type: "antisocial",
+        type: "2",
         content: "2",
       },
       {
-        type: "antisocial",
+        type: "3",
         content: "3",
       },
     ],
