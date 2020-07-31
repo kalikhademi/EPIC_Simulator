@@ -7,21 +7,31 @@ Clone the code from the repo in [https://github.com/kalikhademi/EPIC_Simulator] 
 
 ### git clone [https://github.com/kalikhademi/EPIC_Simulator]
 
+=======
+`git clone [https://github.com/kalikhademi/EPIC_Simulator]`
+
 # Step 2:
 
 Enter the local directory of the application using the following command on Terminal (MAC OSX and Linux) or Command Line (Windows):
 
 ### cd [local repository]
 
+=======
+`cd [local repository]`
+
 # Step 3:
 
 Check package.json file and ensure scripts are notated as below:
+
 "scripts": {
 "start": "react-scripts start",
 "build": "react-scripts build",
 "test": "react-scripts test",
 "eject": "react-scripts eject"
 },
+=======
+
+`"scripts": { "start": "react-scripts start",<br /> "build": "react-scripts build",<br /> "test": "react-scripts test",<br /> "eject": "react-scripts eject"<br /> }`
 
 # Step 4:
 
@@ -32,6 +42,9 @@ Delete the node_modules folder and any 'lock' files such as package-lock.json if
 Install the Node Package Manager (NPM) using:
 
 ### npm install npm@latest -g
+
+=======
+`npm install npm@latest -g`
 
 # Step 6:
 
@@ -48,11 +61,27 @@ You will need to work with scripts in "build" and "src" directories only.
 
 # build
 
+=======
+`npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits and save.<br />
+You will also see any errors in the console. You can use the Developer Tools to find more information (on browsers such as Mozilla and Google Chrome).
+
+## Files Information
+
+You will need to work with scripts in "build" and "src" directories only.
+
+# Build Directory
+
 You will only change the "index.html" and "favicon.ico" in this directory.
 If you want to change the way that app looks, you need to access the index.html in this directory.[Lines 4 to 14]
 "favicon.ico" will be used for the icon in the browser tab.
 
 # src
+
+=======
+
+# Src Directory
 
 All the functionalities of the application come from this directory. I will explain all the scripts and sections in detail.
 
@@ -107,7 +136,7 @@ You can deploy the app on [heroku](https://heroku.com)using the following steps:
 3. enter the following commands in the termianl (Mac OS X) or CMD (Windows):
 
 - git init --> this will initialize the git repository for you
-- heroku create \$$$APPNAME$$$ https://github.com/mars/create-react-app-buildpack.git  --> create the buildpack on heroku. You need to pick an app name which is all in lowercase and enter it in the place of $$$APPNAME$$\$
+- heroku create \\\$\\$\\$APPNAME\\$\\$\\$ https://github.com/mars/create-react-app-buildpack.git --> create the buildpack on heroku. You need to pick an app name which is all in lowercase and enter it in the place of \\$\\$\\$APPNAME\\$\\$\$
 - git add . --> This will add the documents to the heroku app created in the previous step
 - git commit -m "react-create-app on Heroku" --> commit all the changes to confirm
 - git push heroku master
