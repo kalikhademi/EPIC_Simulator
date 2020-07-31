@@ -275,6 +275,23 @@ var quizQuestions = [
   },
   {
     //18
+    question:
+      "Does the offender participate or perform in the school activities?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
+    category: "education/employment",
+  },
+  {
+    //18
     question: "Rate the participation/performance score in the school",
     answers: [
       {
@@ -295,6 +312,22 @@ var quizQuestions = [
       },
     ],
     type: "raterBox",
+    category: "education/employment",
+  },
+  {
+    //19
+    question: "Does the offender interact with other peers  in school?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
     category: "education/employment",
   },
   {
@@ -323,6 +356,22 @@ var quizQuestions = [
   },
   {
     //20
+    question: "Does the offender interact with authority figures?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
+    category: "education/employment",
+  },
+  {
+    //20
     question: "Rate the interactions with authority figures",
     answers: [
       {
@@ -347,6 +396,22 @@ var quizQuestions = [
   },
   {
     //21
+    question: "Does the offfender have bad financial status?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
+    category: "financial",
+  },
+  {
+    //21
     question: "Rate the financial status of the offender",
     answers: [
       {
@@ -367,6 +432,22 @@ var quizQuestions = [
       },
     ],
     type: "raterBox",
+    category: "financial",
+  },
+  {
+    //22
+    question: "Does the offender relied upon social assistance?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
     category: "financial",
   },
   {
@@ -396,6 +477,23 @@ var quizQuestions = [
   {
     //23
     question:
+      "Is the offender unsatisfied with marital or equivalent situation?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
+    category: "family/marital",
+  },
+  {
+    //23
+    question:
       "Rate the offender's level of satisfaction with marital or equivalent situation",
     answers: [
       {
@@ -420,6 +518,22 @@ var quizQuestions = [
   },
   {
     //24
+    question: "Does the offernder has non-rewarding relation with parents?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
+    category: "family/marital",
+  },
+  {
+    //24
     question: "Rate the offernder's non-rewarding relation with parents",
     answers: [
       {
@@ -440,6 +554,23 @@ var quizQuestions = [
       },
     ],
     type: "raterBox",
+    category: "family/marital",
+  },
+  {
+    //25
+    question:
+      "Does the offernder has non-rewarding relation with other relatives?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
     category: "family/marital",
   },
   {
@@ -489,6 +620,22 @@ var quizQuestions = [
     question: "Does the offender has unsatisfactory accomodation?",
     answers: [
       {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
+    category: "accommodation",
+  },
+  {
+    //27
+    question: "Rate the offender's unsatisfactory accomodation level",
+    answers: [
+      {
         type: "0",
         content: "0",
       },
@@ -505,7 +652,7 @@ var quizQuestions = [
         content: "3",
       },
     ],
-    type: "yes/no",
+    type: "raterBox",
     category: "accommodation",
   },
   {
@@ -694,6 +841,22 @@ var quizQuestions = [
     question: "Does offender currently has an alcohol problem?",
     answers: [
       {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
+    category: "alcohol/drug problems",
+  },
+  {
+    //39
+    question: "Does offender currently has an alcohol problem?",
+    answers: [
+      {
         type: "0",
         content: "0",
       },
@@ -711,6 +874,22 @@ var quizQuestions = [
       },
     ],
     type: "raterBox",
+    category: "alcohol/drug problems",
+  },
+  {
+    //40
+    question: "Does offender currently has a drug problem?",
+    answers: [
+      {
+        type: "negative",
+        content: "yes",
+      },
+      {
+        type: "positive",
+        content: "no",
+      },
+    ],
+    type: "yes/no",
     category: "alcohol/drug problems",
   },
   {

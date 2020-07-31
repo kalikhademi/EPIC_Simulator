@@ -122,12 +122,8 @@ class App extends Component {
         console.log(category);
         if (answer === "negative") {
           this.setState({ criminalHistory: this.state.criminalHistory + 1 });
-        } else if (answer === "positive") {
-          this.setState({ criminalHistory: this.state.criminalHistory });
         } else {
-          this.setState({
-            criminalHistory: this.state.criminalHistory + Number(answer),
-          });
+          this.setState({ criminalHistory: this.state.criminalHistory });
         }
         break;
       case "education/employment":
@@ -136,14 +132,9 @@ class App extends Component {
           this.setState({
             educantionEmployment: this.state.educantionEmployment + 1,
           });
-        } else if (answer === "positive") {
-          this.setState({
-            educantionEmployment: this.state.educantionEmployment,
-          });
         } else {
           this.setState({
-            educantionEmployment:
-              this.state.educantionEmployment + Number(answer),
+            educantionEmployment: this.state.educantionEmployment,
           });
         }
         break;
@@ -151,72 +142,48 @@ class App extends Component {
         console.log(category);
         if (answer === "negative") {
           this.setState({ financial: this.state.financial + 1 });
-        } else if (answer === "positive") {
-          this.setState({ financial: this.state.financial });
         } else {
-          this.setState({
-            financial: this.state.financial + Number(answer),
-          });
+          this.setState({ financial: this.state.financial });
         }
         break;
       case "family/marital":
         console.log(category);
         if (answer === "negative") {
           this.setState({ family: this.state.family + 1 });
-        } else if (answer === "positive") {
-          this.setState({ criminalHistory: this.state.criminalHistory });
         } else {
-          this.setState({
-            criminalHistory: this.state.criminalHistory + Number(answer),
-          });
+          this.setState({ criminalHistory: this.state.criminalHistory });
         }
         break;
       case "accommodation":
         console.log(category);
         if (answer === "negative") {
           this.setState({ accomodation: this.state.accomodation + 1 });
-        } else if (answer === "positive") {
-          this.setState({ accomodation: this.state.accomodation });
         } else {
-          this.setState({
-            accomodation: this.state.accomodation + Number(answer),
-          });
+          this.setState({ accomodation: this.state.accomodation });
         }
         break;
       case "leisure/recreation":
         console.log(category);
         if (answer === "negative") {
           this.setState({ leisure: this.state.leisure + 1 });
-        } else if (answer === "positive") {
-          this.setState({ leisure: this.state.leisure });
         } else {
-          this.setState({
-            leisure: this.state.leisure + Number(answer),
-          });
+          this.setState({ leisure: this.state.leisure });
         }
         break;
       case "companions":
         console.log(category);
         if (answer === "negative") {
           this.setState({ companions: this.state.companions + 1 });
-        } else if (answer === "positive") {
-          this.setState({ companions: this.state.companions });
         } else {
-          this.setState({
-            companions: this.state.companions + Number(answer),
-          });
+          this.setState({ companions: this.state.companions });
         }
         break;
       case "alcohol/drug problems":
         console.log(category);
         if (answer === "negative") {
           this.setState({ alcoholDrug: this.state.alcoholDrug + 1 });
-        } else if (answer === "positive") {
-          this.setState({ alcoholDrug: this.state.alcoholDrug });
         } else {
-          this.setState({
-            alcoholDrug: this.state.alcoholDrug + Number(answer),
-          });
+          this.setState({ alcoholDrug: this.state.alcoholDrug });
         }
         break;
       case "emotional/personal":
@@ -225,24 +192,16 @@ class App extends Component {
           this.setState({
             emotionalPersonal: this.state.emotionalPersonal + 1,
           });
-        } else if (answer === "positive") {
-          this.setState({ emotionalPersonal: this.state.emotionalPersonal });
         } else {
-          this.setState({
-            emotionalPersonal: this.state.emotionalPersonal + Number(answer),
-          });
+          this.setState({ emotionalPersonal: this.state.emotionalPersonal });
         }
         break;
       case "attitude/orientation":
         console.log(category);
         if (answer === "negative") {
           this.setState({ attitude: this.state.attitude + 1 });
-        } else if (answer === "positive") {
-          this.setState({ attitude: this.state.attitude });
         } else {
-          this.setState({
-            attitude: this.state.attitude + Number(answer),
-          });
+          this.setState({ attitude: this.state.attitude });
         }
         break;
       default:
